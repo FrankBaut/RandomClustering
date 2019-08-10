@@ -1,4 +1,4 @@
-#' process_rm_paste
+#' proceso
 #'
 #' @param data
 #'
@@ -6,14 +6,11 @@
 #' @export
 #'
 #' @examples
-process_rm_paste <- function(data){
-  data <- big_cl(data) %>%
-    small_cl()
+proceso<-function(data){
+  data<-data %>% big_cl() %>% small_cl()
   data[!is.na(data)] <- 1
   data[is.na(data)] <- 0
-  data <- data %>%
-    as.logical() %>%
-    matrix(ncol = dim(data)[1] ) %>%
-    RandomClustering::label()
+  data<- data %>% as.logical() %>% matrix(ncol=dim(data)[1]) %>%
+    RandomClustering::label(wrap = T)
   return(data)
 }
