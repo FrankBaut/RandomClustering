@@ -11,7 +11,7 @@ We generate a binary lattice of size <a href="https://www.codecogs.com/eqnedit.p
 
 * Choose the smallest cluster and we paste rabdomly  a cell with the same label of the selected cluster.
 
-* If there are several smallest clusters with the same size, we choose one of them randomly and we repeat the previous step.
+* If there are several smallest clusters with the same size, we choose one of them randomly and we repeat the previous step.  
 
 
 ![](RandomCluster.gif)

@@ -14,5 +14,5 @@ URL:https://github.com/FrankBaut/RandomClusters
 BugReports: https://github.com/FrankBaut/RandomClusters/issues
 Description: This package draw random clusters on a lattice, remove a random cell from the biggets cluster and the paste a cell in the smallest neigbohr choosing one of his nearest randomly.
 License:  MIT + file LICENSE
-Encoding: UTF-8
+Encoding: UTF-8   
 LazyData: true
