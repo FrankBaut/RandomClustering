@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-proceso<-function(data){
+proceso <-function(data){
   data<-data %>% big_cl() %>% small_cl()
   data[!is.na(data)] <- 1
   data[is.na(data)] <- 0
