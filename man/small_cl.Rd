@@ -1,6 +1,6 @@
 \name{small_cl}
 \alias{small_cl}
-\title{This function paste a random cell ramdomly in reigbor in a cluster}
+\title{This, function, paste, a, random, cell, ramdomly, in neighbor, in,  a, cluster}
 \usage{
 small_cl()
 }
