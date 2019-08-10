@@ -30,7 +30,7 @@ small_cl<-function(data){
     indice<-1:4
     random_index<-indice %>%sample(1)
     random_place<-fronteras[random_index,]
-    random_place<-nuevo_lugar(random_place,data)
+    random_place<-new_place(random_place,data)
     if(is.na(data[random_place$i,random_place$j])==T){
       data[random_place$i,random_place$j]<-data[i,j]
     }else{
