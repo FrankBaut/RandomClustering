@@ -1,6 +1,6 @@
 \name{small_cl}
 \alias{small_cl}
-\title{This, function, paste, a, random, cell, ramdomly, in neighbor, in,  a, cluster}
+\title{Removes cell from small cluster}
 \usage{
 small_cl()
 }
