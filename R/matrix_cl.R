@@ -1,6 +1,7 @@
 #' clusters_matrix
 #'
 #' @param ncell
+#'
 #' @param prob_vector
 #'
 #' @return
