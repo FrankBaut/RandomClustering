@@ -1,8 +1,7 @@
 exportPattern("^[[:alpha:]]+")
-<<<<<<< HEAD
 useDynLib(RandomClustering)
 importFrom(Rcpp, sourceCpp)
-=======
-
+importFrom(magrittr, "%>%")
+importFrom(stats, "rbinom")
+importFrom(utils, "head", "tail")
 export(matrix_cl)
->>>>>>> 683122258085aad9c9064332efbd4d935dc5f425
