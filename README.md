@@ -50,15 +50,15 @@ Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 
 ``` r
 n<-50
-iterations<-10
+iterations<-50 
 p<-seq(.01,.9,.01)
-biggets_cluster<-matrix(,nrow = length(p),ncol =iterations)
+biggets_cluster<-matrix(,nrow = length(p),ncol = iterations)
 for (i in 1:length(p)) {
-  data<-clusters_matrix(n,densidades[i])
-  for (j in 1:iteraciones){
+  data<-clusters_matrix(n,p[i])
+  for (j in 1:iterations) {
     data<-proceso(data)
     caso<-data %>% as.vector()%>% na.omit() %>% plyr::count()
-    cluster_maximo[i,j]<-max(caso$freq,na.rm = T)/sum(caso$freq,na.rm = T)
+    biggets_cluster[i,j]<-max(caso$freq,na.rm = T)/sum(caso$freq,na.rm = T)
   }
-}  
+}
 ```
