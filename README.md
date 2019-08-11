@@ -64,4 +64,22 @@ for (i in 1:length(p)) {
   }
 }
 ```
-However this is really slow, therefore we must do a parallel process
+However this is really slow, therefore we must do a parallel process. Two libraries very useful are ```r foreach ``` 
+and ```r doParallel ```.
+``` r
+# install.packages("foreach")
+# install.packages("doParallel")
+```
+``` r
+library(foreach)
+library(doParallel)
+iterations<-10
+n<-50
+prob_vec<-seq(.01,.9,.01)
+registerDoParallel(detectCores()-2)
+biggets_cluster<-unlist(complete_processPar(n,prob_vec,iterations))
+stopImplicitCluster()
+df<-data.frame(prob_vec,biggets_cluster)
+plot(df)
+```
+
