@@ -9,7 +9,7 @@ Generate a binary (0,1) lattice of size <a href="https://www.codecogs.com/eqnedi
 
 * Choose the biggets cluster formed in the lattice and randomly remove a cell.
 
-* Choose the smallest cluster and we paste rabdomly  a cell with the same label of the selected cluster.
+* Choose the smallest clusters and add randomly a cell with the same label of the selected cluster in one of his neighbors.
 
 * If there are several smallest clusters with the same size, we choose one of them randomly and we repeat the previous step.  
 
