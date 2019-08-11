@@ -13,7 +13,7 @@ new_place(coordinates,data)
 chhoose.
 }
 \description{
-Select a random cell in a matrix, if one choosed neigbors cell is out matrix dimetions, new_place() applay periodic conditions.
+Select a random cell in a matrix, when one choosed neigbors cell is out matrix dimetions, new_place() applay periodic conditions.
 }
 \examples{
 n<-10
