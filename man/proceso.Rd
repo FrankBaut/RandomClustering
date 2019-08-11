@@ -1,63 +1,23 @@
 \name{proceso}
 \alias{proceso}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Process followed to remove and paste random cells ona matrix
 }
 \usage{
-proceso(data)
+proceso(.matrix)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{
-%%     ~~Describe \code{data} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+\item{.matrix}{a matrix object of class \code{Matrix}.}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns the input \code{.matrix} object with a new name \code{matrix}. It contains: \code{matrix}, a \code{matrix}.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\description{
+Iterate remove an paste random cells
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (data) 
-{
-    data <- data \%>\% big_cl() \%>\% small_cl()
-    data[!is.na(data)] <- 1
-    data[is.na(data)] <- 0
-    data <- data \%>\% as.logical() \%>\% matrix(ncol = dim(data)[1]) \%>\% 
-        RandomClustering::label(wrap = T)
-    return(data)
-  }
+n<-10
+p<-0.5
+data<- clusters_matrix(n,p)
+proceso(data)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
