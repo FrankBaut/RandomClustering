@@ -24,7 +24,16 @@ We generate a binary lattice of size <a href="https://www.codecogs.com/eqnedit.p
 devtools::install_github("FrankBaut/RandomClustering")
 ```
 ``` r
+# install.packages("tidyverse")
+# install.packages("magrittr")
+```
+
+``` r
 # Basic workflow:
-matrix <- clusters_matrix(n=10, p = 0.5) %>%
+library("tidyverse")
+library("magrittr")
+library("RandomClustering")
+
+Label_clusters <- clusters_matrix(n=10, p = 0.5) %>%
   big_cl() %>% small_cl()
 ```
