@@ -4,7 +4,7 @@
 Remove a random cell in the bisggest cluster
 }
 \usage{
-find_chains(.mp)
+big_cl(.matrix)
 }
 \arguments{
 \item{.matrix}{a matrix object of class \code{Matrix}.}
@@ -21,4 +21,4 @@ p<-0.5
 data<- clusters_matrix(n,p)
 big_cl(data)
 }
-}
+
