@@ -23,3 +23,8 @@ We generate a binary lattice of size <a href="https://www.codecogs.com/eqnedit.p
 # install.packages("devtools")
 devtools::install_github("FrankBaut/RandomClustering")
 ```
+``` r
+# Basic workflow:
+matrix <- clusters_matrix(n=10, p = 0.5) %>%
+  big_cl() %>% small_cl()
+```
