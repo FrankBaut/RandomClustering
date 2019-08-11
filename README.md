@@ -48,6 +48,8 @@ Or with pipe operator ``` %>% ```:
 ``` r
 Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 ```
+## Simulation
+
 In the given case if you want to make a simulation, you can do this:
 
 ``` r
