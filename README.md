@@ -37,8 +37,7 @@ library("RandomClustering")
 Label_clusters <- clusters_matrix(n=10, p = 0.5) %>%
   big_cl() %>% small_cl()
 ```
-maybe we would like observ the new clusters configuration after one iteration and re-label this configuration.
-Basically we must do:
+Maybe we would like observe the new clusters configuration after one iteration and re-label this configuration. Basically we must do:
 ``` r
 Label_clusters <- clusters_matrix(n=10,p=0.5)
 proceso(Label_clusters)
