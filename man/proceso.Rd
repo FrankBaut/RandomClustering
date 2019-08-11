@@ -1,16 +1,16 @@
 \name{proceso}
 \alias{proceso}
 \title{
-Process followed to remove and paste random cells ona matrix
+Process followed to remove and paste random cells on a matrix.
 }
 \usage{
-proceso(.matrix)
+proceso(matrix)
 }
 \arguments{
-\item{.matrix}{a matrix object of class \code{Matrix}.}
+\item{matrix}{a matrix object of class \code{Matrix}.}
 }
 \value{
-Returns the input \code{.matrix} object with a new name \code{matrix}. It contains: \code{matrix}, a \code{matrix}.
+Returns the input \code{.matrix} object with a cell replaced randomly.
 }
 \description{
 Iterate remove an paste random cells

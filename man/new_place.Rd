@@ -3,7 +3,7 @@
 \title{
 Choose a new place when conds are bigger than matrix dimentions.}
 \usage{
-new_place(.coordinates,.data)
+new_place(coordinates,data)
 }
 \arguments{
 \item{coordinates}{an integer object of class \code{integer}.}
@@ -13,7 +13,7 @@ new_place(.coordinates,.data)
 chhoose.
 }
 \description{
-Is useful when we want choose a new cell using boundary conditions on a matrix
+Select a random cell in a matrix, if one choosed neigbors cell is out matrix dimetions, \textit{new_place} applay periodic conditions.
 }
 \examples{
 n<-10

@@ -4,17 +4,19 @@
 Generate a random binary matrix and label formed clusters.
 }
 \usage{
-clusters_matrix(.integer,.fracc)
+clusters_matrix(n,p)
 }
 \arguments{
-\item{n}{an integer object of class \code{integer}.}
-  \item{p}{a float object}
+\item{n}{an integer object.}
+  \item{p}{a float object, take values between 0 and 1.}
 }
 \value{
-Returns the input \code{.matrix} object with a new name \code{matrix}. It contains: \code{matrix}, a \code{matrix}.
+Returns a \code{matrix} of size $n\times n$ and probability of filling $p$.  Generate clusters with different label.
 }
 \description{
-Is useful when we want generate random clsters on a matrix
+First generate a binary matrix of size $n\times n$. p is a indicates how many 1's will be put on a matrix randomly.
+This will genrate cluters coneceted. \textit{cluster_matrix} label this clusters.
+
 }
 \examples{
 n<-10
