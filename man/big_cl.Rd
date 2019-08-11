@@ -10,7 +10,7 @@ big_cl(matrix)
 \item{matrix}{a object of class \code{matrix}.}
 }
 \value{
-Returns the input \code{.matrix} object without one cell in the input \code{matrix}.
+Returns the input \code{matrix} object without one cell in the input \code{matrix}.
 }
 \description{
 Choose the biggest labeled cluster in a matrix and remove randomly one of its cells.
