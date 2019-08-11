@@ -1,5 +1,4 @@
 \name{clusters_matrix}
-\name{clusters_matrix}
 \alias{clusters_matrix}
 \title{
 Generate a random binary matrix and label formed clusters.
