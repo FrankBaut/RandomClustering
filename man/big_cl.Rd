@@ -1,19 +1,19 @@
 \name{big_cl}
 \alias{big_cl}
 \title{
-Remove a random cell in the bisggest cluster
+Remove a random cell in the bisggest cluster.
 }
 \usage{
-big_cl(.matrix)
+big_cl(matrix)
 }
 \arguments{
-\item{.matrix}{a matrix object of class \code{Matrix}.}
+\item{matrix}{a object of class \code{matrix}.}
 }
 \value{
-Returns the input \code{.matrix} object with a new name \code{matrix}. It contains: \code{matrix}, a \code{matrix}.
+Returns the input \code{.matrix} object without one cell in the input \code{matrix}.
 }
 \description{
-Is useful when we wanr to remove a random cell in clusters on a matrix
+Choose the biggest labeled cluster in a matrix and remove randomly one of its cells.
 }
 \examples{
 n<-10
