@@ -64,8 +64,8 @@ for (i in 1:length(p)) {
   }
 }
 ```
-However this is really slow, therefore we must do a parallel process. Two libraries very useful are ```r foreach ``` 
-and ```r doParallel ```.
+However this is really slow, therefore we must do a parallel process. Two libraries very useful are ```foreach``` 
+and ```doParallel```.
 ``` r
 # install.packages("foreach")
 # install.packages("doParallel")
@@ -80,6 +80,5 @@ registerDoParallel(detectCores()-2)
 biggets_cluster<-unlist(complete_processPar(n,prob_vec,iterations))
 stopImplicitCluster()
 df<-data.frame(prob_vec,biggets_cluster)
-plot(df)
 ```
-
+We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores.
