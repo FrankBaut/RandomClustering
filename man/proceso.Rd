@@ -7,10 +7,10 @@ Process followed to remove and paste random cells on a matrix.
 proceso(matrix)
 }
 \arguments{
-\item{matrix}{a matrix object of class \code{Matrix}.}
+\item{matrix}{a matrix object of class \code{matrix}.}
 }
 \value{
-Returns the input \code{.matrix} object with a cell replaced randomly.
+Returns the input \code{matrix} object with a cell replaced randomly.
 }
 \description{
 Iterate remove an paste random cells
