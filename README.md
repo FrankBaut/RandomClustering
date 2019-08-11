@@ -27,6 +27,7 @@ devtools::install_github("FrankBaut/RandomClustering")
 # install.packages("tidyverse")
 # install.packages("magrittr")
 ```
+## Examples
 
 ``` r
 # Basic workflow:
@@ -47,6 +48,7 @@ Or with pipe operator ``` %>% ```:
 ``` r
 Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 ```
+In the given case if you want to make a simulation, you can do this:
 
 ``` r
 n<-50
@@ -62,3 +64,4 @@ for (i in 1:length(p)) {
   }
 }
 ```
+However this is really slow, therefore we must do a parallel process
