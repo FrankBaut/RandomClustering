@@ -2,7 +2,7 @@
 #'
 #' @param ncell
 #'
-#' @param prob_vector
+#' @param prob
 #'
 #' @return
 #' @export
