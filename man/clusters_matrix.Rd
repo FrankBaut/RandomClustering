@@ -1,62 +1,26 @@
 \name{clusters_matrix}
+\name{clusters_matrix}
 \alias{clusters_matrix}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Generate a random binary matrix and label formed clusters.
 }
 \usage{
-clusters_matrix(ncell = 10, prob = 0.5)
+clusters_matrix(.integer,.fracc)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{ncell}{
-%%     ~~Describe \code{ncell} here~~
-}
-  \item{prob}{
-%%     ~~Describe \code{prob} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+\item{n}{an integer object of class \code{integer}.}
+  \item{p}{a float object}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns the input \code{.matrix} object with a new name \code{matrix}. It contains: \code{matrix}, a \code{matrix}.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\description{
+Is useful when we want generate random clsters on a matrix
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (ncell = 10, prob = 0.5) 
-{
-    rbinom(n = ncell^2, size = 1, prob = prob) \%>\% as.logical(.) \%>\% 
-        matrix(data = ., nrow = ncell, ncol = ncell) \%>\% RandomClustering::label(wrap = T)
-  }
+n<-10
+p<-0.5
+data<- clusters_matrix(n,p)
+data
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
