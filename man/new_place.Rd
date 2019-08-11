@@ -1,7 +1,7 @@
 \name{new_place}
 \alias{new_place}
 \title{
-Choose a new place when conds are bigger than matrix dimentions.}
+Choose a new place when conditions are bigger than matrix dimentions.}
 \usage{
 new_place(coordinates,data)
 }
@@ -13,7 +13,7 @@ new_place(coordinates,data)
 chhoose.
 }
 \description{
-Select a random cell in a matrix, if one choosed neigbors cell is out matrix dimetions, \textit{new_place} applay periodic conditions.
+Select a random cell in a matrix, if one choosed neigbors cell is out matrix dimetions, new_place() applay periodic conditions.
 }
 \examples{
 n<-10
