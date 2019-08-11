@@ -1,3 +1,14 @@
+#' processPar
+#'
+#' @param iteratios
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 processPar<-function(iterations,data){
   cluster<-foreach(i=seq_len(iterations)) %dopar% {
     data<-proceso(data)
