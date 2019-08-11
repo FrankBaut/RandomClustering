@@ -81,4 +81,4 @@ biggets_cluster<-unlist(complete_processPar(n,prob_vec,iterations))
 stopImplicitCluster()
 df<-data.frame(prob_vec,biggets_cluster)
 ```
-We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores.
+We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores. Remenber stop the parallel process with ```stopImplicitCluster()``` when you finish your calculations.
