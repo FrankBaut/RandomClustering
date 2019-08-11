@@ -15,3 +15,11 @@ We generate a binary lattice of size <a href="https://www.codecogs.com/eqnedit.p
 
 
 ![](RandomCluster.gif)
+
+## Installation
+
+``` r
+# The development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("FrankBaut/RandomClustering")
+```
