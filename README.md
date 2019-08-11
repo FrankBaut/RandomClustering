@@ -48,5 +48,21 @@ Or with pipe operator ``` %>% ```:
 Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 ```
 
-
-
+``` r
+n<-100 
+iteraciones<-10 
+densidades<-seq(.01,.9,.01)
+cluster_maximo<-matrix(,nrow = length(densidades),ncol =iteraciones)
+clust_numb<-matrix(,nrow = length(densidades),ncol =iteraciones)
+tabla_de_Freq<-list()
+tiempo<-vector()
+for (i in 1:length(densidades)) {
+  data<-Matrix_cl(n,densidades[i])[[1]]
+  for (j in 1:iteraciones) {
+    data<-proceso(data)
+    caso<-data %>% table() %>% data.frame() %>% select(Freq)
+    cluster_maximo[i,j]<-max(caso$Freq,na.rm = T)/sum(caso$Freq,na.rm = T)#cluster Max por iteracion
+    clust_numb[i,j]<-length(caso$Freq)##Numero de clusters por iteracion
+  }
+}
+```
