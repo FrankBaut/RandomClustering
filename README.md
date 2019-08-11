@@ -27,6 +27,7 @@ devtools::install_github("FrankBaut/RandomClustering")
 # install.packages("tidyverse")
 # install.packages("magrittr")
 ```
+## Examples
 
 ``` r
 # Basic workflow:
@@ -37,4 +38,30 @@ library("RandomClustering")
 Label_clusters <- clusters_matrix(n=10, p = 0.5) %>%
   big_cl() %>% small_cl()
 ```
+Maybe we would like observe the new clusters configuration after one iteration and re-label this configuration. Basically we must do:
+``` r
+Label_clusters <- clusters_matrix(n=10,p=0.5)
+proceso(Label_clusters)
+```
+Or with pipe operator ``` %>% ```:
 
+``` r
+Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
+```
+In the given case if you want to make a simulation, you can do this:
+
+``` r
+n<-50
+iterations<-50 
+p<-seq(.01,.9,.01)
+biggets_cluster<-matrix(,nrow = length(p),ncol = iterations)
+for (i in 1:length(p)) {
+  data<-clusters_matrix(n,p[i])
+  for (j in 1:iterations) {
+    data<-proceso(data)
+    caso<-data %>% as.vector()%>% na.omit() %>% plyr::count()
+    biggets_cluster[i,j]<-max(caso$freq,na.rm = T)/sum(caso$freq,na.rm = T)
+  }
+}
+```
+However this is really slow, therefore we must do a parallel process
