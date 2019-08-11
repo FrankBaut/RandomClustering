@@ -15,8 +15,7 @@ Returns a \code{matrix} of size NxN and probability of filling p.  Generate clus
 }
 \description{
 First generate a binary matrix of size NxN. p is a indicates how many 1 will be put on a matrix randomly.
-This will genrate cluters coneceted. cluster_matrix(n,p) label this clusters.
-
+  This will genrate cluters coneceted. cluster_matrix label this clusters.
 }
 \examples{
 n<-10
