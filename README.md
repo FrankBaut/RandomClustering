@@ -75,7 +75,7 @@ and ```doParallel```.
 ``` r
 library(foreach)
 library(doParallel)
-iterations<-10
+iterations<-50
 n<-50
 prob_vec<-seq(.01,.9,.01)
 registerDoParallel(detectCores()-2)
