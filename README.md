@@ -51,7 +51,7 @@ Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 
 ## Simulation
 
-In the given case if you want to make a simulation, you can do this:
+In the given case if you want to make a simulation and observe the biggets cluster in different p values, you can do this:
 
 ``` r
 n<-100
