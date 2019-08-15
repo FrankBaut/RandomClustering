@@ -35,12 +35,12 @@ library("tidyverse")
 library("magrittr")
 library("RandomClustering")
 
-Label_clusters <- clusters_matrix(n=10, p = 0.5) %>%
+Label_clusters <- clusters_matrix(n=100, p = 0.5) %>%
   big_cl() %>% small_cl()
 ```
 Maybe we would like observe the new clusters configuration after one iteration and re-label this configuration. Basically we must do:
 ``` r
-Label_clusters <- clusters_matrix(n=10,p=0.5)
+Label_clusters <- clusters_matrix(n=100,p=0.5)
 proceso(Label_clusters)
 ```
 Or with pipe operator ``` %>% ```:
@@ -49,3 +49,40 @@ Or with pipe operator ``` %>% ```:
 Label_clusters <- clusters_matrix(n=10,p=0.5) %>% proceso()
 ```
 
+## Simulation
+
+In the given case if you want to make a simulation, you can do this:
+
+``` r
+n<-100
+iterations<-50 
+p<-seq(.01,.9,.01)
+biggets_cluster<-matrix(,nrow = length(p),ncol = iterations)
+for (i in 1:length(p)) {
+  data<-clusters_matrix(n,p[i])
+  for (j in 1:iterations) {
+    data<-proceso(data)
+    caso<-data %>% as.vector()%>% na.omit() %>% plyr::count()
+    biggets_cluster[i,j]<-max(caso$freq,na.rm = T)/sum(caso$freq,na.rm = T)
+  }
+}
+```
+However this is really slow, therefore we must do a parallel process. Two libraries very useful are ```foreach``` 
+and ```doParallel```.
+``` r
+# install.packages("foreach")
+# install.packages("doParallel")
+```
+``` r
+library(foreach)
+library(doParallel)
+iterations<-50
+n<-100
+prob_vec<-seq(.01,.9,.01)
+registerDoParallel(detectCores()-2)
+biggets_cluster<-unlist(complete_processPar(n,prob_vec,iterations))
+stopImplicitCluster()
+df<-data.frame(prob_vec,biggets_cluster)
+plot(df)
+```
+We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores. Remenber stop the parallel process with ```stopImplicitCluster()``` when you finish your calculations.
