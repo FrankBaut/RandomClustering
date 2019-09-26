@@ -6,6 +6,9 @@
 #'
 #' @param iterations
 #'
+#' @param l
+#' 
+#' @param pb
 #' @return
 #' @export
 #'
