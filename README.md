@@ -76,13 +76,19 @@ and ```doParallel```.
 ``` r
 library(foreach)
 library(doParallel)
+library(RandomClustering)
 iterations<-50
 n<-100
 prob_vec<-seq(.01,.9,.01)
+#------------Progress bar------------------
+l<-length(prob_vec)
+pb <- txtProgressBar(0,l, style = 3)
+#------------------------------------------
 registerDoParallel(detectCores()-2)
-biggets_cluster<-unlist(complete_processPar(n,prob_vec,iterations))
+biggets_cluster<-unlist(complete_processPar(n, prob_vec,iterations,l,pb))
 stopImplicitCluster()
 df<-data.frame(prob_vec,biggets_cluster)
 plot(df)
+
 ```
 We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores. Remenber stop the parallel process with ```stopImplicitCluster()``` when you finish your calculations.
