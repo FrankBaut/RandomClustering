@@ -93,12 +93,12 @@ plot(df)
 ```
 We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores. Remenber stop the parallel process with ```stopImplicitCluster()``` when you finish your calculations.
 
-``` r
 Please cite this work with:
 
+``` r
 citation("RandomClustering")
-
+```
 or in bibtex format
-
+``` r
 toBibtex(citation("RandomClustering"))
 ```
