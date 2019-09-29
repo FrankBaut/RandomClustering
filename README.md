@@ -56,10 +56,10 @@ In the given case if you want to make a simulation and observe the biggets clust
 ``` r
 n<-100
 iterations<-50 
-p<-seq(.01,.9,.01)
-biggets_cluster<-matrix(,nrow = length(p),ncol = iterations)
-for (i in 1:length(p)) {
-  data<-clusters_matrix(n,p[i])
+prob_vec<-seq(.01,.9,.01)
+biggets_cluster<-matrix(,nrow = length(prob_vec),ncol = iterations)
+for (i in 1:length(prob_vec)) {
+  data<-clusters_matrix(n,prob_vec[i])
   for (j in 1:iterations) {
     data<-proceso(data)
     caso<-data %>% as.vector()%>% na.omit() %>% plyr::count()
