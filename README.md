@@ -88,7 +88,7 @@ registerDoParallel(detectCores()-2)
 biggets_cluster<-unlist(complete_processPar(n, prob_vec,iterations,l,pb))
 stopImplicitCluster()
 df<-data.frame(prob_vec,biggets_cluster)
-plot(df)
+plot(df,xlab="p",ylab="Biggest Cluster")
 
 ```
 ![GitHub Logo](Rplot01.png)
