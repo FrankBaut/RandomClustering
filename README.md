@@ -99,7 +99,7 @@ plot(df,xlab="p",ylab="Biggest Cluster")
 We can choose how many cores we want to use in ```registerDoParallel```  argument. we recommend using at most ```detectCores()-1``` cores. Remenber stop the parallel process with ```stopImplicitCluster()``` when you finish your calculations.
 
 
-If we want see how many clusters there are ofter several iterations we must do:
+If we want see how many clusters there are after several iterations we must do:
 ``` r
 library(foreach)
 library(doParallel)
