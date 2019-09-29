@@ -12,6 +12,7 @@ clusterNumberPar<-function(iterations,data){
   cluster<-foreach(i=seq_len(iterations)) %dopar% {
     data<-proceso(data)
     caso<-data %>% as.vector()%>% na.omit() %>% plyr::count()
+    gc()
     length(caso$freq)
 
   }
